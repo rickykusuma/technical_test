@@ -16,6 +16,7 @@ const CheckColumnForm = ({ register, errors, control }) => {
         title={'Quantity'}
         name={'quantity'}
         type="number"
+        onWheel={() => document.activeElement.blur()}
         register={register}
         placeholder="12"
         onKeyDown={(evt) =>
@@ -36,6 +37,7 @@ const CheckColumnForm = ({ register, errors, control }) => {
         title={'Progress'}
         name={'progress'}
         type="number"
+        onWheel={() => document.activeElement.blur()}
         suffix={<span className={`text-gray-400`}> %</span>}
         register={register}
         placeholder="12.7"

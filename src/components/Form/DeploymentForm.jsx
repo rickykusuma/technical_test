@@ -37,6 +37,7 @@ const DeploymentForm = ({ register, errors, control }) => {
         errors={errors}
         title={'Progress'}
         name={'progress'}
+        onWheel={() => document.activeElement.blur()}
         type="number"
         suffix={<span className={`text-gray-400`}> %</span>}
         register={register}
