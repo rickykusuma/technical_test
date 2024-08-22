@@ -49,6 +49,7 @@ const ComplexForm = ({ register, errors, control }) => {
         title={'Progress'}
         name={'progress'}
         type="number"
+        onWheel={() => document.activeElement.blur()}
         suffix={<span className={`text-gray-400`}> %</span>}
         register={register}
         placeholder="12.7"
