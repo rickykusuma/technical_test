@@ -1,4 +1,5 @@
 import { getCoreRowModel, getSortedRowModel, useReactTable } from '@tanstack/react-table'
+import { showSuccessMessage } from 'lib/toastMessage'
 import { useMemo, useState } from 'react'
 import { useSelector } from 'react-redux'
 
@@ -25,6 +26,7 @@ const useTable = (tableData, columns) => {
     let newArray = data.filter((item) => item.id !== selData?.id)
 
     setData(() => [...newArray])
+    showSuccessMessage('Data have been deleted')
   }
 
   function handleData(data) {
@@ -33,6 +35,7 @@ const useTable = (tableData, columns) => {
 
   function addData(data) {
     setData((prev) => [...prev, data])
+    showSuccessMessage('data have been added successfully')
   }
 
   return {
