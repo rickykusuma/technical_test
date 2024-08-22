@@ -1,4 +1,4 @@
-#Technology Stack:
+Technology Stack:
 - React
 - TailwindCSS
 - Zod
@@ -8,5 +8,5 @@
 - tanstack/react-table
 - Javascript
 
-###Access Website
-Url:
+Access Website
+Url: https://technical-test-ricky.vercel.app
