@@ -9,6 +9,7 @@ import useTable from 'Hooks/useTable'
 import { ADD, DELETE, initialModal } from 'constant'
 import DeleteModal from 'components/ui/Modal/DeleteModal'
 import AddCheckColumnsModal from './Modal/AddCheckColumnsModal'
+import { showSuccessMessage } from 'lib/toastMessage'
 
 const columnHelper = createColumnHelper()
 
@@ -79,6 +80,7 @@ function CheckTable() {
     let newArray = data?.filter((item) => !selectedIds.includes(item.id))
     setSelectedData([])
     closeModal()
+    showSuccessMessage('Data berhasil dihapus')
     return handleData(newArray)
   }
   function handleSubmitData(data) {
